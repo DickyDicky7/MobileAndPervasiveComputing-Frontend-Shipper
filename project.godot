@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SeminarCacVanDeHienDaiCuaCongNghePhanMem-Frontend-Shipper"
+run/main_scene="res://screens/Auth.tscn"
+config/auto_accept_quit=false
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+ScreenCollection="*res://scripts/screen_collection.gd"
+CameraGallery="*res://scripts/camera_gallery.gd"
+
+[display]
+
+window/size/viewport_width=648
+window/size/viewport_height=1152
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="SeminarCacVanDeHienDaiCuaCongNghePhanMem-Frontend-Shipper"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotGetImage/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+viewport/hdr_2d=true

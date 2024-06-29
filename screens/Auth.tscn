@@ -1,0 +1,165 @@
+[gd_scene load_steps=12 format=3 uid="uid://01lo8qgxt2rw"]
+
+[ext_resource type="Script" path="res://scripts/auth.gd" id="1_aji5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmock"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q0db"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y5ht"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3wji"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lja3"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4ejj"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_color = Color(0.1, 0.1, 0.1, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpxv1"]
+bg_color = Color(0.1, 0.1, 0.1, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.101961, 0.101961, 0.101961, 0.301961)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3iq4a"]
+bg_color = Color(0, 0, 0.501961, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0.501961, 0.301961)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqlwx"]
+bg_color = Color(0.1, 0.1, 0.1, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.101961, 0.101961, 0.101961, 0.301961)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68427"]
+bg_color = Color(0, 0, 0.501961, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0.501961, 0.301961)
+shadow_size = 10
+
+[node name="Auth" type="Node"]
+script = ExtResource("1_aji5i")
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9, 0.9, 0.9, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="UsernameL" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Username"
+
+[node name="HSeparator00" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Username" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(600, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rmock")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7q0db")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_4y5ht")
+placeholder_text = "username"
+
+[node name="HSeparator01" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="PasswordL" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Password"
+
+[node name="HSeparator02" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Password" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(600, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_b3wji")
+theme_override_styles/focus = SubResource("StyleBoxFlat_2lja3")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_e4ejj")
+placeholder_text = "email"
+
+[node name="HSeparator03" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="SignIn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_wpxv1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3iq4a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rqlwx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_68427")
+text = "Sign In"

@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpbeg5ut2jorp"]
+
+[ext_resource type="Script" path="res://scripts/pick_up_on_going.gd" id="1_ce85w"]
+[ext_resource type="Texture2D" uid="uid://coxnlpx0riqi4" path="res://Game Icons/PNG/White/2x/downLeft.png" id="2_4lw65"]
+[ext_resource type="Texture2D" uid="uid://dscalyhg1xx4n" path="res://Game Icons/PNG/White/2x/exitLeft.png" id="2_6k1na"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llxhs"]
+bg_color = Color(1, 0.5, 0, 1)
+corner_radius_top_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 0.5, 0, 0.302)
+shadow_size = 10
+
+[node name="Pick_upOnGoing" type="Node"]
+script = ExtResource("1_ce85w")
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9, 0.9, 0.9, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator00" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="HIcon" type="TextureRect" parent="VBoxContainer"]
+self_modulate = Color(1, 0.5, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_4lw65")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_llxhs")
+text = "ongoing pickups"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator01" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Back" type="TextureButton" parent="."]
+self_modulate = Color(0.1, 0.1, 0.1, 1)
+offset_right = 100.0
+offset_bottom = 100.0
+texture_normal = ExtResource("2_6k1na")
