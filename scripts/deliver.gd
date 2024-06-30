@@ -1,7 +1,8 @@
 extends Node;
 
 func _ready() -> void:
-	$Buttons/Accept.pressed.connect(func(): ScreenCollection.switch_screen(self, ScreenCollection.pick_up));
+	$Buttons/Accept.pressed.connect(func(): ScreenCollection.switch_screen(self, ScreenCollection.pick_up));	
+#	$Buttons/Accept.pressed.connect(func(): CameraGallery.plugin.getCameraImage());
 	$Back.pressed.connect(func(): ScreenCollection.switch_screen_back(self));
 	pass;
 

@@ -34,7 +34,7 @@ project/assembly_name="SeminarCacVanDeHienDaiCuaCongNghePhanMem-Frontend-Shipper
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GodotGetImage/plugin.cfg")
+enabled=PackedStringArray("res://addons/GodotGetImage/plugin.cfg", "res://addons/PraxisMapperGPSPlugin/plugin.cfg")
 
 [rendering]
 
