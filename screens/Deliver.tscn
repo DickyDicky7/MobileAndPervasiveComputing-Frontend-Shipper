@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://cc4sr1m26n8i0"]
+[gd_scene load_steps=18 format=3 uid="uid://cc4sr1m26n8i0"]
 
 [ext_resource type="Script" path="res://scripts/deliver.gd" id="1_gcecd"]
 [ext_resource type="Texture2D" uid="uid://bg1w7j3184m0f" path="res://Game Icons/PNG/White/2x/arrowUp.png" id="2_tor5n"]
 [ext_resource type="Texture2D" uid="uid://dscalyhg1xx4n" path="res://Game Icons/PNG/White/2x/exitLeft.png" id="3_hioio"]
+[ext_resource type="Script" path="res://AwaitableHTTPRequest.gd" id="4_yptoc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urr37"]
 bg_color = Color(0, 0, 0.501961, 1)
@@ -117,8 +118,9 @@ corner_radius_bottom_left = 40
 shadow_color = Color(0, 0, 0.501961, 0.301961)
 shadow_size = 10
 
-[node name="Deliver" type="Node"]
+[node name="Deliver" type="Node" node_paths=PackedStringArray("http")]
 script = ExtResource("1_gcecd")
+http = NodePath("AwaitableHTTPRequest")
 
 [node name="BG" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -262,6 +264,7 @@ grow_vertical = 0
 alignment = 1
 
 [node name="Accept" type="Button" parent="Buttons"]
+visible = false
 custom_minimum_size = Vector2(500, 80)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -273,11 +276,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_tcjfl")
 text = "Accept"
 
 [node name="HSeparator00" type="HSeparator" parent="Buttons"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
 [node name="Decline" type="Button" parent="Buttons"]
+visible = false
 custom_minimum_size = Vector2(500, 80)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -289,6 +294,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ktmmm")
 text = "Decline"
 
 [node name="HSeparator01" type="HSeparator" parent="Buttons"]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
@@ -314,3 +320,6 @@ self_modulate = Color(0.1, 0.1, 0.1, 1)
 offset_right = 100.0
 offset_bottom = 100.0
 texture_normal = ExtResource("3_hioio")
+
+[node name="AwaitableHTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("4_yptoc")

@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 
 ScreenCollection="*res://scripts/screen_collection.gd"
 CameraGallery="*res://scripts/camera_gallery.gd"
+Global="*res://global.gd"
 
 [display]
 

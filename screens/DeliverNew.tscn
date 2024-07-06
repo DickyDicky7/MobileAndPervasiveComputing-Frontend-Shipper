@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://733x6ta5cs7u"]
+[gd_scene load_steps=6 format=3 uid="uid://733x6ta5cs7u"]
 
 [ext_resource type="Script" path="res://scripts/deliver_new.gd" id="1_0s7wj"]
 [ext_resource type="Texture2D" uid="uid://dscalyhg1xx4n" path="res://Game Icons/PNG/White/2x/exitLeft.png" id="2_ucexx"]
 [ext_resource type="Texture2D" uid="uid://clx5bqn824l1x" path="res://Game Icons/PNG/White/2x/export.png" id="2_xv0hw"]
+[ext_resource type="Script" path="res://AwaitableHTTPRequest.gd" id="5_vtvs7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1rbe"]
 bg_color = Color(1, 0.5, 0, 1)
@@ -11,8 +12,9 @@ corner_radius_bottom_right = 40
 shadow_color = Color(1, 0.502, 0, 0.3)
 shadow_size = 10
 
-[node name="DeliverNew" type="Node"]
+[node name="DeliverNew" type="Node" node_paths=PackedStringArray("http")]
 script = ExtResource("1_0s7wj")
+http = NodePath("AwaitableHTTPRequest")
 
 [node name="BG" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -65,8 +67,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="ItemList" type="ItemList" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+
 [node name="Back" type="TextureButton" parent="."]
 self_modulate = Color(0.1, 0.1, 0.1, 1)
 offset_right = 100.0
 offset_bottom = 100.0
 texture_normal = ExtResource("2_ucexx")
+
+[node name="AwaitableHTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource("5_vtvs7")
