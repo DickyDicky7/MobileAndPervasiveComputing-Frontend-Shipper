@@ -5,7 +5,7 @@ extends Node;
 func _ready() -> void:
 	$VBoxContainer/SignIn.pressed.connect(func():
 		var re = await http.async_request(
-			"https://waseminarcnpm.azurewebsites.net/auth/sign-in",
+			"https://waseminarcnpm2.azurewebsites.net/auth/sign-in",
 			HTTPClient.Method.METHOD_POST     ,
 			["Content-Type: application/json"],
 			JSON.stringify({

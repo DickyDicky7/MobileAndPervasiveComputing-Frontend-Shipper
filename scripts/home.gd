@@ -8,7 +8,7 @@ func _ready() -> void:
 	$GridContainer/Button02.pressed.connect(func(): ScreenCollection.switch_screen(self, ScreenCollection.deliver_new));
 	$GridContainer/Button03.pressed.connect(func(): ScreenCollection.switch_screen(self, ScreenCollection.deliver_on_going));
 	var r = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/protected/get-staff-by-user-id",
+		"https://waseminarcnpm2.azurewebsites.net/protected/get-staff-by-user-id",
 		HTTPClient.Method.METHOD_POST     ,
 		["Content-Type: application/json"],
 		JSON.stringify({

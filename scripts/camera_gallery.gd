@@ -28,7 +28,7 @@ func _on_image_request_completed(dict):
 	print()
 	
 	var done = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/protected/delivery/update_status",
+		"https://waseminarcnpm2.azurewebsites.net/protected/delivery/update_status",
 		HTTPClient.Method.METHOD_POST     ,
 		["Content-Type: application/json"],
 		JSON.stringify({
@@ -40,7 +40,7 @@ func _on_image_request_completed(dict):
 	print();
 	
 	var r = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/up-img",
+		"https://waseminarcnpm2.azurewebsites.net/up-img",
 		HTTPClient.Method.METHOD_POST     ,
 		["Content-Type: application/json"],
 		JSON.stringify({
@@ -52,7 +52,7 @@ func _on_image_request_completed(dict):
 	print();
 	
 	var pod = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/protected/extract-text-from-image",
+		"https://waseminarcnpm2.azurewebsites.net/protected/extract-text-from-image",
 		HTTPClient.Method.METHOD_POST     ,
 		["Content-Type: application/json"],
 		JSON.stringify({
@@ -63,7 +63,7 @@ func _on_image_request_completed(dict):
 	print();
 	
 	var uorder = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/protected/order?id=" + Global.chosen_order.json["_id"],
+		"https://waseminarcnpm2.azurewebsites.net/protected/order?id=" + Global.chosen_order.json["_id"],
 		HTTPClient.Method.METHOD_PUT      ,
 		["Content-Type: application/json"],
 		JSON.stringify({

@@ -10,7 +10,7 @@ func _ready() -> void:
 			ScreenCollection.switch_screen(self, ScreenCollection.deliver);
 			pass;);
 	var r = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/protected/deliveries/staff?staffId=" + Global.staff.json["staff"]["_id"],
+		"https://waseminarcnpm2.azurewebsites.net/protected/deliveries/staff?staffId=" + Global.staff.json["staff"]["_id"],
 		HTTPClient.Method.METHOD_GET      ,
 		["Content-Type: application/json"],
 		JSON.stringify({

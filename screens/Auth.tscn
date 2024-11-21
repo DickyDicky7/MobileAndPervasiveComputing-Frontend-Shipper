@@ -121,7 +121,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_rmock")
 theme_override_styles/focus = SubResource("StyleBoxFlat_7q0db")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_4y5ht")
-text = "shipper_username_1"
+text = "sh1"
 placeholder_text = "username"
 
 [node name="HSeparator01" type="HSeparator" parent="VBoxContainer"]
@@ -149,7 +149,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_b3wji")
 theme_override_styles/focus = SubResource("StyleBoxFlat_2lja3")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_e4ejj")
-text = "shipper_password_1"
+text = "sh1"
 placeholder_text = "email"
 
 [node name="HSeparator03" type="HSeparator" parent="VBoxContainer"]

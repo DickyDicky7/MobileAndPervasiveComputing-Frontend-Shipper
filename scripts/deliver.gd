@@ -9,7 +9,7 @@ func _ready() -> void:
 #	$Buttons/Accept.pressed.connect(func(): CameraGallery.plugin.getCameraImage());
 	$Back.pressed.connect(func(): ScreenCollection.switch_screen_back(self));
 	var r = await http.async_request(
-		"https://waseminarcnpm.azurewebsites.net/protected/order?id=" + Global.chosen_delivery["orderId"],
+		"https://waseminarcnpm2.azurewebsites.net/protected/order?id=" + Global.chosen_delivery["orderId"],
 		HTTPClient.Method.METHOD_GET      ,
 		["Content-Type: application/json"],
 		JSON.stringify({
